@@ -10,24 +10,46 @@
   <body>
     <h1 class="empty"></h1>
     <!--Form area starts-->
-    <form>
+    <form id="addForm">
       <h1>
         Add a friend
       </h1>
-      <label for="name">
-        Name:
-        <input type="text" id="name" name="name" required /> <br />
+      <label>
+        Name
+        <input type="text" id="name" name="name" required />
       </label>
-      <label for="age">
-        Age:
-        <input type="text" id="age" name="age" /> <br />
+      <label>
+        Age
+        <input type="text" id="age" name="age" />
       </label>
-      <label for="description">
+      <label>
         Description:
-        <input type="text" id="description" name="description" /> <br />
+        <input type="text" id="description" name="description" />
       </label>
       <button id="submit">
-        Submit
+        Add friend
+      </button>
+    </form>
+
+    <form id="editForm">
+      <h1>
+        Add a friend
+      </h1>
+      <label>
+        Name
+        <input type="text" id="name" name="name" required />
+      </label>
+      <label>
+        Age
+        <input type="text" id="age" name="age" />
+      </label>
+      <label>
+        Description:
+        <input type="text" id="description" name="description" />
+      </label>
+      <input type="hidden" name="id" />
+      <button id="submit">
+        Edit friend
       </button>
     </form>
     <!--Form area ends-->
@@ -39,7 +61,8 @@
         <h1>Name</h1>
         <h2>Age</h2>
         <p>Paragraph</p>
-        <button>Delete Me</button>
+        <button class="btnEdit">Edit Me</button>
+        <button class="btnDelete">Delete Me</button>
       </article>
     </template>
     <!--Template area ends-->

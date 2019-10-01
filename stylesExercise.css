@@ -8,6 +8,10 @@
   background-color: crimson;
   margin-top: 10px;
 }
+label,
+input {
+  display: block;
+}
 .notValid {
   background-color: red;
 }
