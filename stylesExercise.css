@@ -1,0 +1,13 @@
+#friends {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  grid-gap: 1em;
+}
+#template-content {
+  border: 1px solid red;
+  background-color: crimson;
+  margin-top: 10px;
+}
+.notValid {
+  background-color: red;
+}

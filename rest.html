@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesExercise.css" />
+  </head>
+  <body>
+    <h1 class="empty"></h1>
+    <!--Form area starts-->
+    <form>
+      <h1>
+        Add a friend
+      </h1>
+      <label for="name">
+        Name:
+        <input type="text" id="name" name="name" required /> <br />
+      </label>
+      <label for="age">
+        Age:
+        <input type="text" id="age" name="age" /> <br />
+      </label>
+      <label for="description">
+        Description:
+        <input type="text" id="description" name="description" /> <br />
+      </label>
+      <button id="submit">
+        Submit
+      </button>
+    </form>
+    <!--Form area ends-->
+
+    <!--Template area starts-->
+    <div id="friends"></div>
+    <template>
+      <article id="template-content">
+        <h1>Name</h1>
+        <h2>Age</h2>
+        <p>Paragraph</p>
+      </article>
+    </template>
+    <!--Template area ends-->
+
+    <script src="rest.js"></script>
+  </body>
+</html>
