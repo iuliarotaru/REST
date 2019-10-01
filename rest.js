@@ -20,9 +20,13 @@ function get() {
 function addFriendToTheDom(friend) {
   const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
+  copy.querySelector("#template-content").dataset.friendid = friend._id;
   copy.querySelector("h1").textContent = friend.name;
   copy.querySelector("h2").textContent = friend.age;
   copy.querySelector("p").textContent = friend.description;
+  copy.querySelector("button").addEventListener("click", () => {
+    deleteIt(friend._id);
+  });
   document.querySelector("#friends").prepend(copy);
 }
 get();
@@ -54,6 +58,24 @@ function post() {
   document.querySelector("form").reset();
 }
 
+//Delete
+//-------------------------------------------------
+function deleteIt(id) {
+  fetch("https://frontendautumn2019-9fed.restdb.io/rest/friends/" + id, {
+    method: "delete",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "5d887e69fd86cb75861e2627",
+      "cache-control": "no-cache"
+    }
+  })
+    .then(res => res.json())
+    .then(data => {
+      document
+        .querySelector(`#template-content[data-friendid="${id}"]`)
+        .remove();
+    });
+}
 document.querySelector("#submit").addEventListener("click", e => {
   post();
 });
